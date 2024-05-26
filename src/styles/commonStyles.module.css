@@ -1,0 +1,44 @@
+html{
+    background: #70ad9f;
+    max-height: 100vh !important;
+}
+
+.mainpage {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+    font-size: 18px;
+}
+.content::-webkit-scrollbar {
+    display: none; /* для Chrome, Safari и Opera */
+}
+
+.menubar {
+    width:200px;
+    height: 100vh;
+}
+
+@media (max-width: 500px) {
+    .menubar {
+        width: 100%;
+        height: auto;
+    }
+
+    .mainpage {
+        flex-direction: column;
+    }
+
+    .content {
+        height: auto;
+        padding: 20px;
+    }
+}
